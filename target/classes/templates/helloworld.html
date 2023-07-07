@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Thymeleaf Demo</title>
+
+	<!-- Reference CSS file -->
+	<link rel="stylesheet" href="/css/demo.css" />
+
+	<!-- Custom CSS -->
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffb6c1; /* Baby pink background color */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .funny {
+            color: #ff6699;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+	<h1>Thymeleaf Demo</h1>
+
+	<p class="funny" th:text="'Time on the server is ' + ${theDate}"></p>
+
+	<!-- Custom JS -->
+	<script>
+            // JavaScript code for interactivity or functionality
+            var funnyElement = document.querySelector('.funny');
+            funnyElement.addEventListener('click', function() {
+                alert('You clicked the funny element!');
+            });
+        </script>
+</div>
+</body>
+
+</html>
